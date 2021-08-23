@@ -7,7 +7,13 @@ import { getBasketTotal } from "../../Global State/Reducer";
 function Subtotal() {
   const history = useHistory();
   const [{ basket }, dispatch] = useStateValue();
-
+  const handlePayment = () => {
+    if (basket.length !== 0) {
+      history.push("/payment");
+    } else {
+      alert("Please buy any product to proceed");
+    }
+  };
   return (
     <div className="subtotal">
       <CurrencyFormat
@@ -29,9 +35,7 @@ function Subtotal() {
         prefix={"$"}
       />
 
-      <button onClick={(e) => history.push("/payment")}>
-        Proceed to Checkout
-      </button>
+      <button onClick={handlePayment}>Proceed to Checkout</button>
     </div>
   );
 }

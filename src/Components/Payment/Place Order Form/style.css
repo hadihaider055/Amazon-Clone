@@ -3,7 +3,6 @@
   padding: 20px;
   background-color: white;
   height: max-content;
-  margin: 0 auto;
 }
 
 .checkout__ad {
@@ -15,8 +14,4 @@
   margin-right: 10px;
   padding: 10px;
   border-bottom: 1px solid lightgray;
-}
-.checkout__right {
-  text-align: left;
-  margin-left: 30px;
 }
